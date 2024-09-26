@@ -30,7 +30,14 @@ class TestLibrary(unittest.TestCase):
         self.assertIn(self.book1, self.library.books)
         self.assertEqual(len(self.library.books), 1)
         
-    
+    def test_view_available_books(self):
+        """Test if all available books in the library are listed."""
+        self.library.add_book(self.book1)
+        self.library.add_book(self.book2)
+        available_books = self.library.view_available_books()
+        self.assertIn(self.book1, available_books)
+        self.assertIn(self.book2, available_books)
+        self.assertEqual(len(available_books), 2)
 
 if __name__ == '__main__':
     unittest.main()
