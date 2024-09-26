@@ -8,6 +8,10 @@ class Book:
     def __repr__(self):
         return f"ISBN: {self.isbn}, Title: {self.title}, Author: {self.author}, Year: {self.year}"
     
+    def add_book(self, book):
+        """Adds a new book to the library."""
+        
+        
 class Library:
     def __init__(self):
         self.books = []
