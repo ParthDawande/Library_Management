@@ -25,6 +25,8 @@ class Book:
     
     def return_book(self, book):
         """Returns a book to the library."""
+        self.books.append(book)
+        print(f"Book '{book.title}' returned to the library.")
         
         
         
