@@ -13,6 +13,14 @@ class TestLibrary(unittest.TestCase):
         self.library.add_book(self.book1)
         self.assertIn(self.book1, self.library.books)
         self.assertEqual(len(self.library.books), 1)
+        
+    def test_borrow_book(self):
+        """Test if a book can be borrowed from the library."""
+        self.library.add_book(self.book1)
+        borrowed_book = self.library.borrow_book("123")
+        self.assertEqual(borrowed_book, self.book1)
+        self.assertNotIn(self.book1, self.library.books)
+        self.assertEqual(len(self.library.books), 0)
 
 if __name__ == '__main__':
     unittest.main()

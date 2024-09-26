@@ -12,6 +12,10 @@ class Book:
         """Adds a new book to the library."""
         self.books.append(book)
         print(f"Book '{book.title}' added to the library.")
+    
+    def borrow_book(self, isbn):
+        """Borrows a book from the library by its ISBN."""
+        
         
         
 class Library:
