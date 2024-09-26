@@ -22,6 +22,9 @@ class Book:
                 return book
         print(f"Book with ISBN {isbn} is not available.")
         return None
+    
+    def return_book(self, book):
+        """Returns a book to the library."""
         
         
         
