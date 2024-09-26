@@ -27,7 +27,17 @@ class Book:
         """Returns a book to the library."""
         self.books.append(book)
         print(f"Book '{book.title}' returned to the library.")
-        
+    
+    def view_available_books(self):
+        """Displays all available books in the library."""
+        if not self.books:
+            print("No books are currently available in the library.")
+            return []
+        else:
+            print("Available books:")
+            for book in self.books:
+                print(book)
+            return self.books
         
         
 class Library:
