@@ -10,6 +10,8 @@ class Book:
     
     def add_book(self, book):
         """Adds a new book to the library."""
+        self.books.append(book)
+        print(f"Book '{book.title}' added to the library.")
         
         
 class Library:
