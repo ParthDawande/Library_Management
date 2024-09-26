@@ -38,6 +38,11 @@ class TestLibrary(unittest.TestCase):
         self.assertIn(self.book1, available_books)
         self.assertIn(self.book2, available_books)
         self.assertEqual(len(available_books), 2)
+        
+    def test_borrow_book_not_available(self):
+        """Test borrowing a non-existent book throws an error."""
+        with self.assertRaises(ValueError):
+            self.library.borrow_book("999")
 
 if __name__ == '__main__':
     unittest.main()
