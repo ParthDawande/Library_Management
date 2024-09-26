@@ -15,6 +15,13 @@ class Book:
     
     def borrow_book(self, isbn):
         """Borrows a book from the library by its ISBN."""
+        for book in self.books:
+            if book.isbn == isbn:
+                self.books.remove(book)
+                print(f"You have borrowed '{book.title}'.")
+                return book
+        print(f"Book with ISBN {isbn} is not available.")
+        return None
         
         
         
